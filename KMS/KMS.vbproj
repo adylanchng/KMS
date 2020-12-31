@@ -92,30 +92,54 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddFood.aspx" />
-    <Content Include="AdminPortal.aspx" />
+    <Content Include="About.aspx" />
     <Content Include="App_data\KMS_DB.mdf" />
     <Content Include="App_data\KMS_DB_log.ldf">
       <DependentUpon>KMS_DB.mdf</DependentUpon>
     </Content>
+    <Content Include="Feedback.aspx" />
     <Content Include="GeneralStyle.css" />
     <Content Include="Home.aspx" />
-    <Content Include="ManageKopitiam.aspx" />
-    <Content Include="ManageStall.aspx" />
-    <Content Include="ReviewGeneralSuggestions.aspx" />
-    <Content Include="ReviewKopitiamSuggestions.aspx" />
-    <Content Include="ReviewStallSuggestions.aspx" />
-    <Content Include="Suggestion.aspx" />
-    <Content Include="Template.aspx" />
+    <Content Include="Kopitiam.aspx" />
+    <Content Include="KopitiamSuggestion.aspx" />
+    <Content Include="StallSuggestion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.vb">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.vb">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Home.aspx.designer.vb">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.vb">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kopitiam.aspx.designer.vb">
+      <DependentUpon>Kopitiam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kopitiam.aspx.vb">
+      <DependentUpon>Kopitiam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="KopitiamSuggestion.aspx.designer.vb">
+      <DependentUpon>KopitiamSuggestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KopitiamSuggestion.aspx.vb">
+      <DependentUpon>KopitiamSuggestion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -136,11 +160,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Suggestion.aspx.designer.vb">
-      <DependentUpon>Suggestion.aspx</DependentUpon>
+    <Compile Include="StallSuggestion.aspx.designer.vb">
+      <DependentUpon>StallSuggestion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Suggestion.aspx.vb">
-      <DependentUpon>Suggestion.aspx</DependentUpon>
+    <Compile Include="StallSuggestion.aspx.vb">
+      <DependentUpon>StallSuggestion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

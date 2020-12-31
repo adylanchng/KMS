@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Home
+Partial Public Class Kopitiam
 
     '''<summary>
     '''form1 control.
@@ -23,92 +23,83 @@ Partial Public Class Home
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''FirstGreyBar control.
+    '''SecondGreyBar control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents FirstGreyBar As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents SecondGreyBar As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''StateDropDownList control.
+    '''KopitiamIdLabel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents StateDropDownList As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents KopitiamIdLabel As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''SqlDataSource2 control.
+    '''BackButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SqlDataSource2 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents BackButton As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''FoodDropDownList control.
+    '''Stalls control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents FoodDropDownList As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Stalls As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''SqlDataSource1 control.
+    '''GridViewWithTheKopitiam control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents GridViewWithTheKopitiam As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Kopitiams control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Kopitiams As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''statusLabel control.
+    '''LinkButton1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents statusLabel As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''lnkDummy control.
+    '''StallGridView control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lnkDummy As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents StallGridView As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''mainGridView control.
+    '''SuggestButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents mainGridView As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''AboutButton control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents AboutButton As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SuggestButton As Global.System.Web.UI.WebControls.Button
 End Class
