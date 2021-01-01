@@ -9,7 +9,8 @@ Public Class Home
     'The command to populate the gridview with initially before any user specific filtering. 
     Dim findKopitiamDetails As SqlCommand
 
-
+    'The command to find ID based on name from food table
+    Dim findFoodId As SqlCommand
 
     'The command to filter by state - yes, filter by food - no. 
     Dim filterYesNo As SqlCommand
@@ -36,12 +37,16 @@ Public Class Home
         filterYesNo = New SqlCommand(filterYNSql, conn)
 
         'Set up the SqlCommand to retrive kopitiams with filter by state - no, filter by food - yes
-        Dim filterNYSql As String = "SELECT Kopitiam.Id, Kopitiam.Status, Kopitiam.Name, State.Name as StateName, Kopitiam.Address, Kopitiam.OpHourSt, Kopitiam.OpHourEn, Kopitiam.OpDayOfWeek, Kopitiam.Halal FROM Kopitiam JOIN Stall ON Kopitiam.Id = Stall.kId JOIN Food ON Stall.FoodId=Food.Id WHERE Food.Id = @b"
+        Dim filterNYSql As String = "SELECT Kopitiam.Id, Kopitiam.Status, Kopitiam.Name, State.Name as StateName, Kopitiam.Address, Kopitiam.OpHourSt, Kopitiam.OpHourEn, Kopitiam.OpDayOfWeek, Kopitiam.Halal FROM Kopitiam JOIN State ON Kopitiam.StateId = State.Id JOIN Stall ON Kopitiam.Id = Stall.kId JOIN Food ON Stall.FoodId=Food.Id WHERE Food.Id = @b"
         filterNoYes = New SqlCommand(filterNYSql, conn)
 
         'Set up the SqlCommand to retrive kopitiams with filter by state - yes, filter by food - yes
         Dim filterYYSql As String = "SELECT Kopitiam.Id, Kopitiam.Status, Kopitiam.Name, State.Name as StateName, Kopitiam.Address, Kopitiam.OpHourSt, Kopitiam.OpHourEn, Kopitiam.OpDayOfWeek, Kopitiam.Halal FROM Kopitiam JOIN State ON Kopitiam.StateId = State.Id JOIN Stall ON Kopitiam.Id = Stall.kId JOIN Food ON Stall.FoodId=Food.Id WHERE Kopitiam.StateId = @a AND Food.Id = @b"
         filterYesYes = New SqlCommand(filterYYSql, conn)
+
+        'Set up the SqlCommand to retrive food id from name 
+        Dim findFood As String = "SELECT Id FROM Food WHERE Name = @a"
+        findFoodId = New SqlCommand(findFood, conn)
 
         statusLabel.Visible = False
 
@@ -122,18 +127,44 @@ Public Class Home
     End Sub
 
     Protected Sub FoodDropDownList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FoodDropDownList.SelectedIndexChanged
+
         ApplyFilter()
 
     End Sub
 
     Public Sub ApplyFilter()
         Dim StateNumber As Integer = StateDropDownList.SelectedIndex
-        Dim FoodNumber As Integer = FoodDropDownList.SelectedIndex
-
+        Dim FoodNumber As Integer
         Dim openConn As Boolean = (conn.State = ConnectionState.Open)
         If (openConn = False) Then
             conn.Open()
         End If
+
+        findFoodId.Parameters.Clear()
+        findFoodId.Parameters.AddWithValue("a", FoodDropDownList.SelectedValue)
+
+        ' Then run byCategoryCmd. The SqlDataAdapter will put the query results inside a DataSet with the label "byCat"
+        Dim adapter1 As SqlDataAdapter = New SqlDataAdapter(findFoodId)
+        Dim ds1 As DataSet = New DataSet()
+        adapter1.Fill(ds1, "byCat")
+
+        ' Now the query results are inside a DataTable called "byCat" inside ds
+        Dim dt1 As DataTable = ds1.Tables("byCat")
+
+        ' Check whether dt has any rows inside it? If dt.Rows.Count = 0 that means 0 rows, i.e. no data found!
+        If Not (dt1.Rows.Count = 0) Then
+
+            ' otherwise = there are really some rows of data in the result!
+            ' should be exactly ONE row. Take the first row in the table.
+            Dim dr As DataRow = dt1.Rows(0)
+            ' get the value in the "name" column, assign to a variable rn
+            Dim rn As String = dr("Id")
+            ' put value of rn in the listbox
+
+            FoodNumber = rn
+        End If
+
+
 
         If StateNumber = 0 And FoodNumber = 0 Then
             'filter by state - no 

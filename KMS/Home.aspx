@@ -37,13 +37,11 @@
                         ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|KMS_DB.mdf;Integrated Security=True"
                         SelectCommand="SELECT [Name] FROM [State]"></asp:SqlDataSource>
                     &nbsp;that serves:
-                    <asp:DropDownList ID="FoodDropDownList" runat="server" AppendDataBoundItems="true"
-                        AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
+                    <asp:DropDownList ID="FoodDropDownList" runat="server" AppendDataBoundItems="True"
+                        AutoPostBack="True" DataSourceID="SqlDataSource4" DataTextField="Name" DataValueField="Name">
                         <asp:ListItem Value="-1">all food</asp:ListItem>
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-                        ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|KMS_DB.mdf;Integrated Security=True"
-                        SelectCommand="SELECT [Id] ,[Name] FROM [Food]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|KMS_DB.mdf;Integrated Security=True" SelectCommand="SELECT [Name] FROM [Food] ORDER BY [Name]"></asp:SqlDataSource>
                 </b>
                 <br />
                 <br />

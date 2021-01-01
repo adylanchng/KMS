@@ -97,12 +97,9 @@
     <Content Include="App_data\KMS_DB_log.ldf">
       <DependentUpon>KMS_DB.mdf</DependentUpon>
     </Content>
-    <Content Include="Feedback.aspx" />
     <Content Include="GeneralStyle.css" />
     <Content Include="Home.aspx" />
     <Content Include="Kopitiam.aspx" />
-    <Content Include="KopitiamSuggestion.aspx" />
-    <Content Include="StallSuggestion.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -111,13 +108,6 @@
     </Compile>
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Feedback.aspx.designer.vb">
-      <DependentUpon>Feedback.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Feedback.aspx.vb">
-      <DependentUpon>Feedback.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Home.aspx.designer.vb">
@@ -132,13 +122,6 @@
     </Compile>
     <Compile Include="Kopitiam.aspx.vb">
       <DependentUpon>Kopitiam.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="KopitiamSuggestion.aspx.designer.vb">
-      <DependentUpon>KopitiamSuggestion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="KopitiamSuggestion.aspx.vb">
-      <DependentUpon>KopitiamSuggestion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -159,13 +142,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="StallSuggestion.aspx.designer.vb">
-      <DependentUpon>StallSuggestion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StallSuggestion.aspx.vb">
-      <DependentUpon>StallSuggestion.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

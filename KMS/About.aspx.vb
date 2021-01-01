@@ -5,4 +5,7 @@
 
     End Sub
 
+    Protected Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
+        Response.Redirect("Home.aspx")
+    End Sub
 End Class

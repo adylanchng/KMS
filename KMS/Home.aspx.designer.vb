@@ -59,13 +59,13 @@ Partial Public Class Home
     Protected WithEvents FoodDropDownList As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''SqlDataSource1 control.
+    '''SqlDataSource4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
+    Protected WithEvents SqlDataSource4 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
     '''Kopitiams control.

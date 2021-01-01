@@ -89,7 +89,7 @@
          
         <div style=" text-align: center;">
             <div style="background-color: white;  width:75%; margin-left: auto; margin-right: auto; padding-left:5%; text-align:center;">
-                <asp:Button ID="SuggestButton" runat="server" Text="Click here to improve Kopitiam Management System by suggesting."></asp:Button>
+                <asp:Button ID="SuggestButton" runat="server" Text="Click here to learn more about Kopitiam Managment System"></asp:Button>
                 <br />
                 <br />
             </div>

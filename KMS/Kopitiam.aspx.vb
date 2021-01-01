@@ -58,6 +58,7 @@ Public Class Kopitiam
             GridViewWithTheKopitiam.DataSource = Nothing
             GridViewWithTheKopitiam.DataBind()
 
+
         Else ' otherwise = there are really some rows of data in the result!
             ' Assume that each user id is unique, so if results available,
             ' should be exactly ONE row. Take the first row in the table.
@@ -81,13 +82,14 @@ Public Class Kopitiam
         If (dt3.Rows.Count = 0) Then
             StallGridView.DataSource = Nothing
             StallGridView.DataBind()
-
+            Label1.Visible = True
         Else ' otherwise = there are really some rows of data in the result!
             ' Assume that each user id is unique, so if results available,
             ' should be exactly ONE row. Take the first row in the table.
 
             StallGridView.DataSource = dt3
             StallGridView.DataBind()
+            Label1.Visible = False
         End If
 
         conn.Close()
@@ -116,5 +118,9 @@ Public Class Kopitiam
 
     Protected Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         Response.Redirect("Home.aspx")
+    End Sub
+
+    Protected Sub SuggestButton_Click(sender As Object, e As EventArgs) Handles SuggestButton.Click
+        Response.Redirect("About.aspx")
     End Sub
 End Class
